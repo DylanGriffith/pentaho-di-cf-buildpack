@@ -16,7 +16,7 @@ export KETTLE_HOME=$HOME
 ' > $BUILD_DIR/setenv.sh
 mkdir $BUILD_DIR/.open_jdk_jre
 
-wget $JAVA_URL -O $JAVA_FILE
+wget --no-verbose $JAVA_URL -O $JAVA_FILE
 cd $JAVA_DIR
 tar xvf $JAVA_FILE
 cd $BUILD_DIR
