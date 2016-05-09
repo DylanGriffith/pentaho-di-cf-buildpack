@@ -1,9 +1,7 @@
 #!/bin/bash
 
-BUILD_DIR=$1
-
 echo "
 ---
 default_process_types:
-  web: \"$BUILD_DIR/pdi/data-integration/kitchen.sh -file $BUILD_DIR/job.kjb\"
+  web: \"./pdi/data-integration/kitchen.sh -file \$(pwd)/job.kjb\"
 "
