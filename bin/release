@@ -3,5 +3,5 @@
 echo "
 ---
 default_process_types:
-  web: \"JAVA_HOME=\$(pwd)/.open_jdk_jre && PATH=$PATH:\$(pwd)/.open_jdk_jre/bin && ./pdi/data-integration/kitchen.sh -file \$(pwd)/job.kjb\"
+  web: \"JAVA_HOME=\$(pwd)/.open_jdk_jre && PATH=\$PATH:\$(pwd)/.open_jdk_jre/bin && ./pdi/data-integration/kitchen.sh -file \$(pwd)/job.kjb\"
 "
