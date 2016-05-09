@@ -2,8 +2,7 @@
 
 ## TODO
 
-- [ ] Downloads Pentaho Data Integration
-- [ ] Runs app.blah for job
-- [ ] Runs app.blah for transformation
+- [X] Downloads Pentaho Data Integration
+- [X] Runs job.kjb for job
+- [X] Caches download
 - [ ] Installs Plugins From .pentaho-plugins
-- [ ] Caches download

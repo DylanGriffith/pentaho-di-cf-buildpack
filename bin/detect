@@ -1,0 +1,9 @@
+#!/bin/bash
+set -e
+
+JOB_FILE="$1/job.kjb"
+
+if test -f $JOB_FILE
+then echo "Pentaho Data Integration (Job)"
+else echo no; exit 1
+fi
