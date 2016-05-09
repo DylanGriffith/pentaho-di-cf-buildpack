@@ -9,11 +9,6 @@ JAVA_URL='https://download.run.pivotal.io/openjdk/precise/x86_64/openjdk-1.8.0_6
 JAVA_FILE=$CACHE_DIR/jdk.tar.gz
 JAVA_DIR=$BUILD_DIR/.open_jdk_jre
 
-echo '
-export JAVA_HOME=$(pwd)/.open_jdk_jre
-export PATH=$PATH:$JAVA_HOME/bin
-export KETTLE_HOME=$HOME
-' > $BUILD_DIR/setenv.sh
 mkdir $BUILD_DIR/.open_jdk_jre
 
 wget --no-verbose $JAVA_URL -O $JAVA_FILE
