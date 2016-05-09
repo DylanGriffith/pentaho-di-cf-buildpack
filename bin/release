@@ -5,5 +5,5 @@ BUILD_DIR=$1
 echo "
 ---
 default_process_types:
-  web: \"pdi/data-integration/kitchen.sh -file $BUILD_DIR/job.kjb\"
+  web: \"$BUILD_DIR/pdi/data-integration/kitchen.sh -file $BUILD_DIR/job.kjb\"
 "
