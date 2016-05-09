@@ -31,4 +31,13 @@ else
   wget --no-verbose $PDI_URL -O $PDI_FILE
 fi
 
+
+# Extract all plugins into steps directory
+for plugin in $BUILD_DIR/.pentaho-plugins/*.zip
+do
+  mkdir -p $PDI_DIR/data-integration/plugins/steps
+  cd $PDI_DIR/data-integration/plugins/steps
+  tar xvf $plugin
+done
+
 unzip $PDI_FILE -d $PDI_DIR
