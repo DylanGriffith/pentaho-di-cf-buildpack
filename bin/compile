@@ -6,7 +6,7 @@ CACHE_DIR=$2
 
 # Install Java
 JAVA_URL='https://download.run.pivotal.io/openjdk/precise/x86_64/openjdk-1.8.0_60.tar.gz'
-JAVA_FILE=$BUILD_DIR/jdk.tar.gz
+JAVA_FILE=$CACHE_DIR/jdk.tar.gz
 JAVA_DIR=$BUILD_DIR/.open_jdk_jre
 
 echo '
