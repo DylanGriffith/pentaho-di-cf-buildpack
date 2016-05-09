@@ -3,5 +3,5 @@
 echo "
 ---
 default_process_types:
-  web: \"./pdi/data-integration/kitchen.sh -file \$(pwd)/job.kjb\"
+  web: \". ./setenv.sh && exec ./pdi/data-integration/kitchen.sh -file \$(pwd)/job.kjb\"
 "

@@ -4,6 +4,24 @@ set -e
 BUILD_DIR=$1
 CACHE_DIR=$2
 
+# Install Java
+JAVA_URL='https://download.run.pivotal.io/openjdk/precise/x86_64/openjdk-1.8.0_60.tar.gz'
+JAVA_FILE=$BUILD_DIR/jdk.tar.gz
+JAVA_DIR=$BUILD_DIR/.open_jdk_jre
+
+echo '
+export JAVA_HOME=$(pwd)/.open_jdk_jre
+export PATH=$PATH:$JAVA_HOME/bin
+export KETTLE_HOME=$HOME
+' > $BUILD_DIR/setenv.sh
+mkdir $BUILD_DIR/.open_jdk_jre
+
+wget $JAVA_URL -O $JAVA_FILE
+cd $JAVA_DIR
+tar xvf $JAVA_FILE
+cd $BUILD_DIR
+
+# Install Pentaho Data Integration
 PDI_URL="http://internode.dl.sourceforge.net/project/pentaho/Data%20Integration/6.1/pdi-ce-6.1.0.1-196.zip"
 
 PDI_FILE=$CACHE_DIR/pdi.zip
