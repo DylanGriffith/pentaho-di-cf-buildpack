@@ -15,7 +15,7 @@ then
   echo "Found cached PDI download."
 else
   echo "Downloading PDI from $PDI_URL";
-  wget $PDI_URL -O $PDI_FILE
+  wget --no-verbose $PDI_URL -O $PDI_FILE
 fi
 
 unzip $PDI_FILE -d $PDI_DIR
