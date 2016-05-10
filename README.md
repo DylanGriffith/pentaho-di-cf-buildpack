@@ -13,7 +13,7 @@ This is a very naive implementation of a buildpack for Pentaho Data Integration.
 ## How To Use
 See example usage in `example` directory.
 
-An example directory structure for deploying would like like:
+An example directory structure for deploying would look like:
 ```
 .
 |-- .pentaho-plugins
